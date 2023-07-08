@@ -28,12 +28,14 @@ public class DietEssentials extends JavaPlugin implements Listener {
         SetSpawnCommand setSpawnCommand = new SetSpawnCommand(this, spawnCommand);
         HomeCommand homeCommand = new HomeCommand(this);
         TimeCommand timeCommand = new TimeCommand(this);
+        WeatherCommand weatherCommand = new WeatherCommand(this);
 
         // Register the commands
         getCommand("spawn").setExecutor(spawnCommand);
         getCommand("setspawn").setExecutor(setSpawnCommand);
         getCommand("home").setExecutor(homeCommand);
         getCommand("time").setExecutor(timeCommand);
+        getCommand("weather").setExecutor(weatherCommand);
 
         getServer().getPluginManager().registerEvents(this, this);
         motd = new Motd(this); // Initialize the 'motd' field
