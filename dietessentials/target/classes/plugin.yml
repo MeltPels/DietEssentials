@@ -1,0 +1,14 @@
+main: com.huismus.DietEssentials
+name: DietEssentials
+version: 0.1
+
+commands:
+  spawn:
+    description: Teleport to spawn
+    usage: /spawn
+  setspawn:
+    description: Set the spawn location
+    usage: /setspawn
+  home:
+    description: Teleport to your personal home, or set it
+    usage: /home [set]
