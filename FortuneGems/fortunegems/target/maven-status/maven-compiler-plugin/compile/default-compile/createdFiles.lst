@@ -1,0 +1,8 @@
+com\huismus\FortuneGems.class
+com\huismus\GemInventoryClickListener.class
+com\huismus\GemConfig.class
+com\huismus\GemInventory.class
+com\huismus\RewardCommand.class
+com\huismus\GemInventoryManager.class
+com\huismus\GemsCommand.class
+com\huismus\GemType.class

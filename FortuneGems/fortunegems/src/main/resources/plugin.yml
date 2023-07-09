@@ -1,0 +1,27 @@
+name: FortuneGems
+version: 1.0
+author: Huismus
+main: com.huismus.FortuneGems
+description: A plugin that introduces digital currencies in the form of gems.
+api-version: 1.20
+
+commands:
+  reward:
+    description: Reward a player with gems.
+    usage: /reward [player] [amount] [gemtype]
+  gems:
+    description: View player's gem count.
+    usage: /gems <player>
+    permission: fortunegems.gems
+  removegems:
+    description: Remove gems from a player.
+    usage: /removegems [player] [amount] [gemtype]
+    permission: fortunegems.removegems
+
+permissions:
+  fortunegems.gems:
+    description: Allows access to the /gems command.
+    default: true
+  fortunegems.removegems:
+    description: Allows access to the /removegems command.
+    default: op

@@ -1,6 +1,8 @@
 main: com.huismus.FortuneEssentials
 name: FortuneEssentials
 version: 0.1
+author: Huismus
+description: A plugin that adds lightweight essential commands.
 
 commands:
   spawn:

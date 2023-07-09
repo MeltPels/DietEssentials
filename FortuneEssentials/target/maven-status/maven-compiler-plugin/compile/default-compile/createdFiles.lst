@@ -8,4 +8,3 @@ com\huismus\WeatherCommand.class
 com\huismus\FortuneEssentials.class
 com\huismus\SpawnCommand.class
 com\huismus\TimeCommand.class
-com\huismus\PTimeCommand$1.class
