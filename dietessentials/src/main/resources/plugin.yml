@@ -1,5 +1,5 @@
-main: com.huismus.DietEssentials
-name: DietEssentials
+main: com.huismus.FortuneEssentials
+name: FortuneEssentials
 version: 0.1
 
 commands:
@@ -12,3 +12,15 @@ commands:
   home:
     description: Teleport to your personal home, or set it
     usage: /home [set]
+  time:
+    description: Change the server time
+    usage: /time [morning, day, evening, night, midnight]
+  ptime:
+    description: Change your personal time
+    usage: /ptime [morning, day, evening, night, midnight]
+  weather:
+    description: Change the server weather
+    usage: /weather [sun, rain, storm] [duration]
+  pweather:
+    description: Change your personal weather
+    usage: /pweather [sun, rain, storm] [duration]

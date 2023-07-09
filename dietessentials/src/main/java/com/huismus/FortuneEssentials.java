@@ -13,9 +13,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-public class DietEssentials extends JavaPlugin implements Listener {
+public class FortuneEssentials extends JavaPlugin implements Listener {
     private Motd motd;
-    private File folder = new File(getDataFolder().getParentFile(), "DietEssentials");
+    private File folder = new File(getDataFolder().getParentFile(), "FortuneEssentials");
 
     @Override
     public void onEnable() {
@@ -25,24 +25,22 @@ public class DietEssentials extends JavaPlugin implements Listener {
 
          // Create instances of commandclasses
         SpawnCommand spawnCommand = new SpawnCommand(this);
-        SetSpawnCommand setSpawnCommand = new SetSpawnCommand(this, spawnCommand);
-        HomeCommand homeCommand = new HomeCommand(this);
-        TimeCommand timeCommand = new TimeCommand(this);
-        WeatherCommand weatherCommand = new WeatherCommand(this);
 
         // Register the commands
-        getCommand("spawn").setExecutor(spawnCommand);
-        getCommand("setspawn").setExecutor(setSpawnCommand);
-        getCommand("home").setExecutor(homeCommand);
-        getCommand("time").setExecutor(timeCommand);
-        getCommand("weather").setExecutor(weatherCommand);
+        getCommand("spawn").setExecutor(new SpawnCommand(this));
+        getCommand("setspawn").setExecutor(new SetSpawnCommand(this, spawnCommand));
+        getCommand("home").setExecutor(new HomeCommand(this));
+        getCommand("time").setExecutor(new TimeCommand(this));
+        getCommand("ptime").setExecutor(new PTimeCommand(this));
+        getCommand("weather").setExecutor(new WeatherCommand(this));
+        getCommand("pweather").setExecutor(new PWeatherCommand(this));
 
         getServer().getPluginManager().registerEvents(this, this);
         motd = new Motd(this); // Initialize the 'motd' field
     }
 
     public void init() {
-        getLogger().info("First start of DietEssentials");
+        getLogger().info("First start of FortuneEssentials");
 
         folder.mkdirs();
         File file = new File(getDataFolder(), "MOTD.txt");
